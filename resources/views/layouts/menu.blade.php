@@ -34,7 +34,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
-    <a href="index.html" class="navbar-brand ms-lg-5">
+    <a href="/" class="navbar-brand ms-lg-5">
         <h1 class="m-0 text-uppercase text-dark">
             <i class="bi bi-shop fs-1 text-primary me-3"></i>Patinhas em Casa
         </h1>
@@ -44,18 +44,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">Sobre</a>
-            <a href="service.html" class="nav-item nav-link">ONGs</a>
-            <a href="product.html" class="nav-item nav-link">Adotar</a>
+            <a href="/" class="nav-item nav-link active">Home</a>
+            <a href="/sobre" class="nav-item nav-link">Sobre</a>
+            <a href="/ongs" class="nav-item nav-link">ONGs</a>
+            <a href="/adotar" class="nav-item nav-link">Adotar</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cuidados</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cadastro</a>
                 <div class="dropdown-menu m-0">
-                    <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                    <a href="team.html" class="dropdown-item">The Team</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                    <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                    <a href="/cadastro/ongs" class="dropdown-item">ONGs</a>
+                    <a href="/cadastro/cuidador" class="dropdown-item">Cuidadores</a>
                 </div>
             </div>
             <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Login <i
