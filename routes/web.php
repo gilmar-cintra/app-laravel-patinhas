@@ -10,18 +10,12 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::get('/ongs', function () {
-    return view('ongs');
-});
-
 Route::get('/adotar', function () {
     return view('adotar');
-});
-
-Route::get('/cadastro/ongs', function () {
-    return view('cadastroONG');
 });
 
 Route::get('/cadastro/cuidador', function () {
     return view('cadastroCuidador');
 });
+
+Route::resource('ong', 'App\Http\Controllers\OngController');

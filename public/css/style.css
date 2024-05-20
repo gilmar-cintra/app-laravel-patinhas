@@ -456,3 +456,38 @@
 .blog-item a:hover i::after {
     width: 50px;
 }
+.painel-container {
+    margin: 15px;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: rgba(254, 254, 254, 0.719);
+    border-radius: 8px;
+    transition: 0.2s !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.camada-text {
+    display: flex;
+    align-items: center;
+}
+
+.page-title {
+    display: inline;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center !important;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+.red-border {
+    border: 1px solid red !important;
+    border-radius: 5px;
+}
+.error-message{
+    color: red;
+    font-weight: 100;
+}

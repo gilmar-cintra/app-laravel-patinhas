@@ -46,12 +46,12 @@
         <div class="navbar-nav ms-auto py-0">
             <a href="/" class="nav-item nav-link active">Home</a>
             <a href="/sobre" class="nav-item nav-link">Sobre</a>
-            <a href="/ongs" class="nav-item nav-link">ONGs</a>
+            <a href="/ong" class="nav-item nav-link">ONGs</a>
             <a href="/adotar" class="nav-item nav-link">Adotar</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cadastro</a>
                 <div class="dropdown-menu m-0">
-                    <a href="/cadastro/ongs" class="dropdown-item">ONGs</a>
+                    <a href="/ong/create" class="dropdown-item">ONGs</a>
                     <a href="/cadastro/cuidador" class="dropdown-item">Cuidadores</a>
                 </div>
             </div>
