@@ -47,7 +47,9 @@ class OngController extends Controller
                 return response()->json($errorResponse, 422);
             }
 
-            $this->processImage($data, $request);
+            if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
+                $data['foto'] = $request->foto->store('img/ongs');
+            }
 
             $data['senha'] = bcrypt($data['senha']);
 
@@ -60,8 +62,8 @@ class OngController extends Controller
         } catch (Throwable $th) {
             DB::rollBack();
             if (isset($data['foto'])) {
-                print_r($data['foto']);
-                unlink(public_path('img/ongs/') . $data['foto']);
+                Storage::delete($data['foto']);
+
             }
             return response()->json(['code' => 400, 'message' => $th->getMessage()]);
         }
@@ -93,19 +95,6 @@ class OngController extends Controller
 
         return Validator::make($data, $regras, $mensagens);
     }
-
-    private function processImage(&$data, $request)
-{
-    if (!empty($data['foto'])) {
-        $image = $data['foto'];
-        if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
-            $image = $request->file('foto');
-            $imageName = md5($image->getClientOriginalName() . strtotime("now")) . '.' . $image->extension();
-            $image->move(public_path('img/ongs'), $imageName);
-            $data['foto'] = 'img/ongs/'.$imageName;
-        }
-    }
-}
 
     /**
      * Display the specified resource.
