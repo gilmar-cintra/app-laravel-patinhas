@@ -17,7 +17,9 @@ class OngController extends Controller
      */
     public function index()
     {
-        return view('ongs');
+        $ongs = Ong::paginate(2);
+
+        return view('ongs', ['ongs' => $ongs]);
     }
 
     /**
