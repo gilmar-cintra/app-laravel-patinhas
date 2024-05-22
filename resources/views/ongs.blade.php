@@ -9,7 +9,7 @@
         <div class="blog-item">
             <div class="row g-0 bg-light overflow-hidden">
                 <div class="col-12 col-sm-5 h-100">
-                    <img class="img-fluid h-100" src="{{ $ong->foto }}" style="object-fit: cover"/>
+                    <img class="img-fluid h-100" src="{{ $ong->foto ? "storage/".$ong->foto : '' }}" style="object-fit: cover"/>
                 </div>
                 <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
                     <div class="p-4">
