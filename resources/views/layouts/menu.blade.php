@@ -57,8 +57,8 @@
                 <div class="dropdown-menu m-0">
                     <a href="/ong/create"
                         class="dropdown-item {{ Request::is('ong/create') ? 'active' : '' }}">ONGs</a>
-                    <a href="/cadastro/cuidador"
-                        class="dropdown-item {{ Request::is('cadastro/cuidador') ? 'active' : '' }}">Cuidadores</a>
+                    <!-- <a href="/cadastro/cuidador"
+                        class="dropdown-item {{ Request::is('cadastro/cuidador') ? 'active' : '' }}">Cuidadores</a> -->
                 </div>
             </div>
             <a href="/login"
