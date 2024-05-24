@@ -55,7 +55,7 @@
                     <a href="/cadastro/cuidador" class="dropdown-item">Cuidadores</a>
                 </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Login <i
+            <a href="/login" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Login <i
                     class="bi bi-arrow-right"></i></a>
         </div>
     </div>
