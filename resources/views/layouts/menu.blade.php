@@ -44,19 +44,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link active">Home</a>
-            <a href="/sobre" class="nav-item nav-link">Sobre</a>
-            <a href="/ong" class="nav-item nav-link">ONGs</a>
-            <a href="/adotar" class="nav-item nav-link">Adotar</a>
+            <a href="/"
+                class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
+            <a href="/sobre"
+                class="nav-item nav-link {{ Request::is('sobre') ? 'active' : '' }}">Sobre</a>
+            <a href="/ong"
+                class="nav-item nav-link {{ Request::is('ong') ? 'active' : '' }}">ONGs</a>
+            <a href="/adotar"
+                class="nav-item nav-link {{ Request::is('adotar') ? 'active' : '' }}">Adotar</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cadastro</a>
                 <div class="dropdown-menu m-0">
-                    <a href="/ong/create" class="dropdown-item">ONGs</a>
-                    <a href="/cadastro/cuidador" class="dropdown-item">Cuidadores</a>
+                    <a href="/ong/create"
+                        class="dropdown-item {{ Request::is('ong/create') ? 'active' : '' }}">ONGs</a>
+                    <a href="/cadastro/cuidador"
+                        class="dropdown-item {{ Request::is('cadastro/cuidador') ? 'active' : '' }}">Cuidadores</a>
                 </div>
             </div>
-            <a href="/login" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Login <i
-                    class="bi bi-arrow-right"></i></a>
+            <a href="/login"
+                class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5 {{ Request::is('login') ? 'active' : '' }}">
+                Login <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </div>
 </nav>
