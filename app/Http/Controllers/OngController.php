@@ -51,7 +51,9 @@ class OngController extends Controller
                 $data['foto'] = $request->foto->store('img/ongs');
             }
 
-            $data['senha'] = bcrypt($data['senha']);
+            $data['password'] = bcrypt($data['senha']);
+
+            unset($data['senha']);
 
             $created = Ong::create($data);
             if (!$created) {

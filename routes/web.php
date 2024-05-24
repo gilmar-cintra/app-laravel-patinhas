@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\OngAuthController;
+
+Route::get('ong/login', [OngAuthController::class, 'showLoginForm'])->name('ong.login');
+Route::post('ong/login', [OngAuthController::class, 'login'])->name('ong.login.submit');
+Route::post('ong/logout', [OngAuthController::class, 'logout'])->name('ong.logout');
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
 
 Route::get('/sobre', function () {
     return view('sobre');

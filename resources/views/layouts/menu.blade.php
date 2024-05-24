@@ -61,8 +61,8 @@
                         class="dropdown-item {{ Request::is('cadastro/cuidador') ? 'active' : '' }}">Cuidadores</a> -->
                 </div>
             </div>
-            <a href="/login"
-                class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5 {{ Request::is('login') ? 'active' : '' }}">
+            <a href="ong/login"
+                class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5 {{ Request::is('ong/login') ? 'active' : '' }}">
                 Login <i class="bi bi-arrow-right"></i>
             </a>
         </div>

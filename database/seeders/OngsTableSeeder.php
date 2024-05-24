@@ -27,7 +27,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'São Paulo',
                 'email' => 'amigosanimais@gmail.com',
                 'telefone' => '(11) 1234-5678',
-                'senha' => Hash::make('senha123'),
+                'password' => Hash::make('password123'),
                 'foto' => null,
             ],
             [
@@ -41,7 +41,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Rio de Janeiro',
                 'email' => 'patitasfelizes@gmail.com',
                 'telefone' => '(21) 9876-5432',
-                'senha' => Hash::make('senha456'),
+                'password' => Hash::make('password456'),
                 'foto' => null,
             ],
             [
@@ -55,7 +55,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Belo Horizonte',
                 'email' => 'anjosquatropatas@gmail.com',
                 'telefone' => '(31) 6543-2109',
-                'senha' => Hash::make('senha789'),
+                'password' => Hash::make('password789'),
                 'foto' => null,
             ],
             [
@@ -69,7 +69,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Porto Alegre',
                 'email' => 'caesgatosfelizes@gmail.com',
                 'telefone' => '(51) 3210-9876',
-                'senha' => Hash::make('senha987'),
+                'password' => Hash::make('password987'),
                 'foto' => null,
             ],
             [
@@ -83,7 +83,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Florianópolis',
                 'email' => 'peludossemlar@gmail.com',
                 'telefone' => '(48) 2109-8765',
-                'senha' => Hash::make('senha654'),
+                'password' => Hash::make('password654'),
                 'foto' => null,
             ],
             [
@@ -97,7 +97,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Salvador',
                 'email' => 'acolhimentoanimal@gmail.com',
                 'telefone' => '(71) 8765-4321',
-                'senha' => Hash::make('senha321'),
+                'password' => Hash::make('password321'),
                 'foto' => null,
             ],
             [
@@ -111,7 +111,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Recife',
                 'email' => 'resgateamoroso@gmail.com',
                 'telefone' => '(81) 4321-8765',
-                'senha' => Hash::make('senha987'),
+                'password' => Hash::make('password987'),
                 'foto' => null,
             ],
             [
@@ -125,7 +125,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Curitiba',
                 'email' => 'aconchegoanimal@gmail.com',
                 'telefone' => '(41) 9012-3456',
-                'senha' => Hash::make('senha456'),
+                'password' => Hash::make('password456'),
                 'foto' => null,
             ],
             [
@@ -139,7 +139,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Goiânia',
                 'email' => 'adoteumamigo@gmail.com',
                 'telefone' => '(62) 3456-7890',
-                'senha' => Hash::make('senha321'),
+                'password' => Hash::make('password321'),
                 'foto' => null,
             ],
             [
@@ -153,7 +153,7 @@ class OngsTableSeeder extends Seeder
                 'cidade' => 'Cuiabá',
                 'email' => 'sospeludos@gmail.com',
                 'telefone' => '(65) 9012-3456',
-                'senha' => Hash::make('senha543'),
+                'password' => Hash::make('password543'),
                 'foto' => null,
             ],
         ];

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('cidade');
             $table->string('email')->unique();
             $table->string('telefone');
-            $table->string('senha');
+            $table->string('password');
             $table->string('foto')->nullable();
             $table->timestamps();
         });

@@ -2,25 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Ong extends Model
+class Ong extends Authenticatable
 {
-    use HasFactory;
+    use Notifiable;
 
     protected $fillable = [
-        'nome',
-        'cep',
-        'endereco',
-        'numero',
-        'complemento',
-        'bairro',
-        'uf',
-        'cidade',
-        'email',
-        'telefone',
-        'senha',
-        'foto'
+        'nome', 'cep', 'endereco', 'numero', 'complemento', 'bairro', 'uf', 'cidade', 'email', 'telefone', 'password', 'foto'
+    ];
+
+    protected $hidden = [
+        'password', 'remember_token',
     ];
 }
