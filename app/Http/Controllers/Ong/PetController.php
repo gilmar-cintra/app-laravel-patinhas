@@ -47,7 +47,7 @@ class PetController extends Controller
 
         $pet->save();
 
-        return redirect()->route('pets.index')->with('success', 'Pet cadastrado com sucesso.');
+        return redirect()->route('ong.dashboard')->with('success', 'Pet cadastrado com sucesso.');
     }
 
     public function show($id)
@@ -85,7 +85,7 @@ class PetController extends Controller
 
         $pet->save();
 
-        return redirect()->route('pets.index')->with('success', 'Pet atualizado com sucesso.');
+        return redirect()->route('ong.dashboard')->with('success', 'Pet atualizado com sucesso.');
     }
 
     public function destroy($id)
@@ -93,6 +93,6 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $pet->delete();
 
-        return redirect()->route('pets.index')->with('success', 'Pet excluído com sucesso.');
+        return redirect()->route('ong.dashboard')->with('success', 'Pet excluído com sucesso.');
     }
 }
