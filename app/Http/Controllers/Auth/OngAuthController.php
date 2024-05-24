@@ -23,7 +23,7 @@ class OngAuthController extends Controller
         ]);
 
         if (Auth::guard('ong')->attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->intended('/dashboard'); // Altere para a rota desejada
+            return redirect()->intended('ong/dashboard'); // Altere para a rota desejada
         }
 
         return back()->withErrors([

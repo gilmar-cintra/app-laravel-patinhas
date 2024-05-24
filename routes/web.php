@@ -2,10 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\OngAuthController;
+use App\Http\Controllers\Ong\DashboardController;
+use App\Http\Controllers\Ong\PetController;
 
-Route::get('ong/login', [OngAuthController::class, 'showLoginForm'])->name('ong.login');
-Route::post('ong/login', [OngAuthController::class, 'login'])->name('ong.login.submit');
-Route::post('ong/logout', [OngAuthController::class, 'logout'])->name('ong.logout');
+Route::prefix('ong')->group(function () {
+    Route::get('login', [OngAuthController::class, 'showLoginForm'])->name('ong.login');
+    Route::post('login', [OngAuthController::class, 'login'])->name('ong.login.submit');
+    Route::post('logout', [OngAuthController::class, 'logout'])->name('ong.logout');
+
+    Route::middleware(['auth:ong'])->group(function () {
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('ong.dashboard');
+        
+        // Rotas CRUD para Pets
+        Route::resource('pets', PetController::class);
+    });
+});
+
+
 
 Route::get('/', function () {
     return view('welcome');
