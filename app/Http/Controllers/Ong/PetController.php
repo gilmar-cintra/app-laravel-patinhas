@@ -95,4 +95,16 @@ class PetController extends Controller
 
         return redirect()->route('ong.dashboard')->with('success', 'Pet excluído com sucesso.');
     }
+
+    public function indexWithOngs()
+    {
+        $pets = Pet::with('ong')->get(); // Carrega os pets com suas respectivas ONGs
+        return view('adotar', compact('pets'));
+    }
+
+    public function welcome()
+    {
+        $pets = Pet::with('ong')->get(); // Carrega os pets com suas respectivas ONGs
+        return view('welcome', compact('pets'));
+    }
 }

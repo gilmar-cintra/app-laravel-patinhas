@@ -153,58 +153,48 @@
             </h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-6">
-                <div class="blog-item">
-                    <div class="row g-0 bg-light overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="img/blog-1.jpg" style="object-fit: cover" />
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
-                            <div class="p-4">
-                                <div class="d-flex mb-3">
-                                    <small class="me-3"><i class="bi bi-bookmarks me-2"></i>ONG Salva
-                                        Migos</small>
-                                    <small><i class="bi bi-calendar-date me-2"></i>01 Jan,
-                                        2022</small>
+            @foreach($pets as $pet)
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
+                                <!-- <img class="img-fluid h-100" src="img/blog-1.jpg" style="object-fit: cover" /> -->
+
+                                <img class="img-fluid h-100"
+                                    src="{{ asset('storage/' . $pet->foto) }}"
+                                    style="object-fit: cover" />
+
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i
+                                                class="bi bi-bookmarks me-2"></i>{{ $pet->raca->nome }}</small>
+                                        <small><i class="bi bi-calendar-date me-2"></i>{{ $pet->idade }} anos</small>
+                                    </div>
+                                    <h5 class="text-uppercase mb-3">{{ $pet->nome }}</h5>
+                                    <p>
+                                        {{ $pet->descricao }}
+
+                                    </p>
+                                    <p>
+                                        {{ $pet->ong->nome }}
+                                    </p>
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3">
+                                            <i class="bi bi-telephone me-2"></i>{{ $pet->ong->telefone }}
+                                        </small>
+                                    </div>
+
+
+
                                 </div>
-                                <h5 class="text-uppercase mb-3">Farofa</h5>
-                                <p>
-                                    Um cachorro muito dócil e brincalhão, adora crianças e é
-                                    um ótimo companheiro para idosos.
-                                </p>
-                                <a class="text-primary text-uppercase" href="">Saiba Mais<i
-                                        class="bi bi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="blog-item">
-                    <div class="row g-0 bg-light overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="img/blog-2.jpg" style="object-fit: cover" />
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
-                            <div class="p-4">
-                                <div class="d-flex mb-3">
-                                    <small class="me-3"><i class="bi bi-bookmarks me-2"></i>ONG
-                                        Preservar</small>
-                                    <small><i class="bi bi-calendar-date me-2"></i>16 Fev,
-                                        2020</small>
-                                </div>
-                                <h5 class="text-uppercase mb-3">Afrodite</h5>
-                                <p>
-                                    Uma cadela cheia de amor para dar, adora brincar e se
-                                    esconder, tem um olhar que encanta a todos.
-                                </p>
-                                <a class="text-primary text-uppercase" href="">Saiba Mais<i
-                                        class="bi bi-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>

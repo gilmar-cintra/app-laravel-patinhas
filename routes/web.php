@@ -20,18 +20,14 @@ Route::prefix('ong')->group(function () {
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PetController::class, 'welcome'])->name('pets.welcome');
 
 
 Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::get('/adotar', function () {
-    return view('adotar');
-});
+Route::get('/adotar', [PetController::class, 'indexWithOngs'])->name('pets.indexWithOngs');
 
 Route::get('/cadastro/cuidador', function () {
     return view('cadastroCuidador');

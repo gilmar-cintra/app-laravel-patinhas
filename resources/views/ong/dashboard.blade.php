@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container">
+    <form id="logout-form" action="{{ route('ong.logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
     <h1>Bem-vindo, {{ $ong->nome }}!</h1>
 
     <div class="col-lg-6">
@@ -39,7 +42,8 @@
                             </a>
                         </div>
                         <div class="d-flex mb-3">
-                            <a style="width: 100px;" width="100" href="{{ route('pets.index') }}"
+                            <a style="width: 100px;" width="100"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                 class="btn btn-primary">Sair</a>
                         </div>
 

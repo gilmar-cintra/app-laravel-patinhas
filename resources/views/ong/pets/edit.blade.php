@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.painel')
 
 @section('content')
 <div class="container">
@@ -11,6 +11,7 @@
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" class="form-control" value="{{ $pet->nome }}" required>
         </div>
+        <br>
         <div class="form-group">
             <label for="raca_id">Raça:</label>
             <select name="raca_id" id="raca_id" class="form-control" required>
@@ -22,18 +23,22 @@
                 @endforeach
             </select>
         </div>
+        <br>
         <div class="form-group">
             <label for="descricao">Descrição:</label>
             <textarea name="descricao" id="descricao" class="form-control" required>{{ $pet->descricao }}</textarea>
         </div>
+        <br>
         <div class="form-group">
             <label for="idade">Idade:</label>
             <input type="number" name="idade" id="idade" class="form-control" value="{{ $pet->idade }}" required>
         </div>
+        <br>
         <div class="form-group">
             <label for="foto">Foto:</label>
             <input type="file" name="foto" id="foto" class="form-control">
         </div>
+        <br>
         <button type="submit" class="btn btn-success">Atualizar</button>
     </form>
 </div>
